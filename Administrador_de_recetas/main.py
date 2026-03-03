@@ -37,6 +37,8 @@ while True:
     elif opcion_del_usuario == 4:
         categoria = elegir_categoria(ruta)
         receta_a_eliminar = elegir_receta(categoria)
+        if receta_a_eliminar is None:
+            continue
         eliminar_receta(receta_a_eliminar)
         limpir_pantalla()
         print("Receta eliminada correctamente")
